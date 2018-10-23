@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Alumnos index{% endblock %}
+{% block title %}Asignaturas index{% endblock %}
 
 {% block body %}
-    <h1>Alumnos index</h1>
+    <h1>Asignaturas index</h1>
 
     <table class="table">
         <thead>
@@ -14,13 +14,13 @@
             </tr>
         </thead>
         <tbody>
-        {% for alumno in alumnos %}
+        {% for asignatura in asignaturas %}
             <tr>
-                <td>{{ alumno.id }}</td>
-                <td>{{ alumno.nombre }}</td>
+                <td>{{ asignatura.id }}</td>
+                <td>{{ asignatura.nombre }}</td>
                 <td>
-                    <a href="{{ path('alumnos_show', {'id': alumno.id}) }}">show</a>
-                    <a href="{{ path('alumnos_edit', {'id': alumno.id}) }}">edit</a>
+                    <a href="{{ path('asignaturas_show', {'id': asignatura.id}) }}">show</a>
+                    <a href="{{ path('asignaturas_edit', {'id': asignatura.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('alumnos_new') }}">Create new</a>
+    <a href="{{ path('asignaturas_new') }}">Create new</a>
 {% endblock %}
